@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: MIT
 
-//** Aiden Token */
+//** GoGoCash Token */
 pragma solidity 0.8.19;
 
 import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol";
