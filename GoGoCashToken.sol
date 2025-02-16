@@ -9,7 +9,7 @@ import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol";
 /// @author GoGoCash.co
 /// @dev A token based on OpenZeppelin's principles
 
-contract AidenToken is ERC20Burnable {
+contract GoGoCashToken is ERC20Burnable {
     /// @notice A constructor that mint the tokens
     constructor() ERC20("GoGoCash", "GGC") {
         _mint(msg.sender, 1_000_000_000 * 10 ** decimals());
