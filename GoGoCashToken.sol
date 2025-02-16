@@ -1,17 +1,12 @@
 // SPDX-License-Identifier: MIT
+// Compatible with OpenZeppelin Contracts ^5.0.0
+pragma solidity ^0.8.22;
 
-//** GoGoCash Token */
-pragma solidity 0.8.20;
+import {ERC20} from "@openzeppelin/contracts@5.2.0/token/ERC20/ERC20.sol";
 
-import "@openzeppelin/contracts/token/ERC20/extensions/ERC20Burnable.sol";
-
-/// @title GoGoCash Token
-/// @author GoGoCash.co
-/// @dev A token based on OpenZeppelin's principles
-
-contract GoGoCashToken is ERC20Burnable {
-    /// @notice A constructor that mint the tokens
-    constructor() ERC20("GoGoCash", "GGC") {
-        _mint(msg.sender, 1_000_000_000 * 10 ** decimals());
+/// @custom:security-contact info@gogocash.co
+contract GoGoCash is ERC20 {
+    constructor(address recipient) ERC20("GoGoCash", "GGC") {
+        _mint(recipient, 1000000000 * 10 ** decimals());
     }
 }
